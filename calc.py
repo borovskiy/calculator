@@ -9,7 +9,6 @@ class Ui_MainWindow(object):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setEnabled(True)
         MainWindow.setFixedSize(300, 400)
-        # MainWindow.resize(300, 400)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -34,9 +33,9 @@ class Ui_MainWindow(object):
             text.setObjectName(value['setObjectName'])
             dict_text.update({value['setObjectName']: text})
         for key, value in dict_button.items():
-            a, b, c, d = value[1]
+            x, y, w, h = value[1]
             button = QtWidgets.QPushButton(MainWindow)
-            button.setGeometry(QtCore.QRect(a, b, c, d))
+            button.setGeometry(QtCore.QRect(x, y, w, h))
             button.setObjectName(key)
             list_button.append([button, value[0]])
         self.retranslateUi(MainWindow)
@@ -56,13 +55,11 @@ class Ui_MainWindow(object):
             button.clicked.connect(lambda state, arg=text: self.write_number(arg))
 
     def translation_into_number(self, number):
-        try:
-            if type(int(number)) == int:
-                return int(number)
-            else:
-                return float(number)
-        except:
-            Exception(print('xxx'))
+        if '.' in number:
+            return float(number)
+        return int(number)
+
+
 
     def check_point_in_finish_string(self):
         if len(self.text_enter.text()) > 0:
