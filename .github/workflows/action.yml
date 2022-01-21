@@ -1,0 +1,16 @@
+name: Test
+
+on:
+  push:
+    branches: 
+      - master
+
+
+jobs:
+  copy_repo:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Print
+      run: echo "Hello world"
