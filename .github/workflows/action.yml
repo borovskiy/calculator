@@ -5,12 +5,19 @@ on:
     branches: 
       - main
 
-
 jobs:
-  copy_repo:
-
+  build:
+    name: Build
     runs-on: ubuntu-latest
-
     steps:
-    - name: Print
-      run: echo "Hello world"
+     - uses: actions/checkout@main
+     - name: copy file via ssh password
+       uses: borovskiy/calculator@main
+       with:
+         host: ${{ secrets.HOST }}
+         username: ${{ secrets.USERNAME }}
+         password: ${{ secrets.PASSWORD }}
+         port: ${{ secrets.PORT }}
+         source: "calc.py"
+         target: "test"
+         
