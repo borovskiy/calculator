@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: clone repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v1
        
       - name: list file
-        run : echo ls -la
+        run : ls -la
 
          
