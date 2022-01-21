@@ -14,11 +14,11 @@ jobs:
       - name: list
         run: ls -la
        
-      - name: scp
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
-          source: "calc.py"
-          target: "/media"
+#       - name: scp
+#         with:
+#           host: ${{ secrets.HOST }}
+#           username: ${{ secrets.USERNAME }}
+#           password: ${{ secrets.PASSWORD }}
+#           port: ${{ secrets.PORT }}
+#           source: "calc.py"
+#           target: "/media"
