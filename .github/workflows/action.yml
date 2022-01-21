@@ -12,13 +12,12 @@ jobs:
      - name: checkout
        uses: actions/checkout@v1
      - name: copy file
-       run: echo "${{secrets.PORTS}}"
-#        uses: ./
-#        with:
-#          host: ${{ secrets.HOST }}
-#          username: ${{ secrets.USERNAME }}
-#          password: ${{ secrets.PASSWORD }}
-#          port: ${{ secrets.PORT }}
-#          source: "calc.py"
-#          target: "test"
+       uses: borovskiy/calculator@main
+       with:
+         host: ${{ secrets.HOST }}
+         username: ${{ secrets.USERNAME }}
+         password: ${{ secrets.PASSWORD }}
+         port: ${{ secrets.PORT }}
+         source: "calc.py"
+         target: "/media"
          
