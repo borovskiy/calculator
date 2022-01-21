@@ -9,16 +9,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-     - name: clone repo
-       uses: actions/checkout@v1
+      - name: clone repo
+        uses: actions/checkout@v1
        
-     - name: list file
-       run: echo ls -la
-#        with:
-#          host: ${{ secrets.HOST }}
-#          username: ${{ secrets.USERNAME }}
-#          password: ${{ secrets.PASSWORD }}
-#          port: ${{ secrets.PORT }}
-#          source: "calc.py"
-#          target: "/media"
+      - name: list file
+        run: echo ls -la
+  #        with:
+  #          host: ${{ secrets.HOST }}
+  #          username: ${{ secrets.USERNAME }}
+  #          password: ${{ secrets.PASSWORD }}
+  #          port: ${{ secrets.PORT }}
+  #          source: "calc.py"
+  #          target: "/media"
          
