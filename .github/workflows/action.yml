@@ -9,10 +9,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: clone repo
-        uses: actions/checkout@v1
-      - name: list
-        run: ls -la
+      - name: checkout
+        uses: actions/checkout@main
        
       - name: scp
         uses: borovskiy/calculator@main
