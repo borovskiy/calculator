@@ -11,9 +11,10 @@ jobs:
     steps:
       - name: clone repo
         uses: actions/checkout@v1
-       
-      - name: list file
+      - name: list
         run: ls -la
+       
+      - name: scp
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
