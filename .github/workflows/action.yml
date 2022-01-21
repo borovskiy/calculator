@@ -12,7 +12,7 @@ jobs:
      - name: checkout
        uses: actions/checkout@v1
      - name: copy file
-       run: echo ${{secrets.HOST}}
+       run: echo "${{secrets.PORTS}}"
 #        uses: ./
 #        with:
 #          host: ${{ secrets.HOST }}
