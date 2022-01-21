@@ -11,12 +11,11 @@ jobs:
     steps:
      - uses: actions/checkout@v1
      - name: copy file via ssh password
-       run: ls -la
-#        with:
-#          host: ${{ secrets.HOST }}
-#          username: ${{ secrets.USERNAME }}
-#          password: ${{ secrets.PASSWORD }}
-#          port: ${{ secrets.PORT }}
-#          source: "calc.py"
-#          target: "test"
+       with:
+         host: ${{ secrets.HOST }}
+         username: ${{ secrets.USERNAME }}
+         password: ${{ secrets.PASSWORD }}
+         port: ${{ secrets.PORT }}
+         source: "calc.py"
+         target: "test"
          
