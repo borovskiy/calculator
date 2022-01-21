@@ -13,6 +13,7 @@ jobs:
         uses: actions/checkout@main
        
       - name: scp
+        uses: ./
         with:
           direction: upload
           host: ${{ secrets.HOST }}
