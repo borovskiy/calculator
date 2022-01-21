@@ -12,7 +12,6 @@ jobs:
      - name: checkout
        uses: actions/checkout@v1
      - name: copy file
-       uses: borovskiy/calculator@main
        with:
          host: ${{ secrets.HOST }}
          username: ${{ secrets.USERNAME }}
