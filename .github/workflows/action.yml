@@ -13,6 +13,10 @@ jobs:
         uses: actions/checkout@v1
        
       - name: list file
-        run : ls -la
-
-         
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          source: "calc.py"
+          target: "/media"
