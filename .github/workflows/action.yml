@@ -9,9 +9,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-     - name: checkout
-       uses: actions/checkout@v1
+     - uses: actions/checkout@v1
+       
      - name: copy file
+       uses: ./
        with:
          host: ${{ secrets.HOST }}
          username: ${{ secrets.USERNAME }}
