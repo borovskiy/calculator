@@ -15,8 +15,8 @@ jobs:
             username: ${{ secrets.USERNAME }}
             port: ${{ secrets.PORT }}
             sourse: "calc.py"
-            target: "/home"
-      
+            target: "/home/alexander/PycharmProjects"
+
       - name: list files
         run: ls -la
        
