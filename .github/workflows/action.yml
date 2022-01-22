@@ -14,11 +14,11 @@ jobs:
       - name: instal req
         run: pip install -r requirements.txt
         
-     - name: compile .exe
-       run: pyinstaller --onefile calc.py
+      - name: compile .exe
+        run: pyinstaller --onefile calc.py
       
         
-        
+      
       - name: scp
         uses: appleboy/scp-action@master
         with:
