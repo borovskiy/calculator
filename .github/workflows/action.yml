@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: copy file via ssh password
       
       - name: instal req
         run: pip install requirements.txt
