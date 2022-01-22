@@ -18,8 +18,9 @@ jobs:
         run: pyinstaller --onefile calc.py
       
       - name: dir
-        run: cd dist/ 
-      - name: olist dir
+        run: mkdir dist/ 
+        
+      - name: list dir
         run: ls -la
 #         uses: appleboy/scp-action@master
 # #         with:
