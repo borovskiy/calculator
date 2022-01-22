@@ -26,6 +26,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          source: "/sss/x.txt"
+          source: "./sss/x.txt"
           target: "/home/alexander/PycharmProjects"
           
