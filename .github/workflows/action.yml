@@ -17,13 +17,13 @@ jobs:
         run: pyinstaller --onefile calc.py
       
       - name: copy file in server
-        run: ls -la
-#         uses: appleboy/scp-action@master
-#         with:
-#           host: ${{ secrets.HOST }}
-#           username: ${{ secrets.USERNAME }}
-#           password: ${{ secrets.PASSWORD }}
-#           port: ${{ secrets.PORT }}
-#           source: "/dist/cacl"
-#           target: "/home/alexander/PycharmProjects"
+#         run: ls -la
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          source: "/dist/cacl.py"
+          target: "/home/alexander/PycharmProjects"
           
