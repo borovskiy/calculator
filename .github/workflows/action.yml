@@ -11,9 +11,11 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v1
+      - name: list files
+        run: ls -la
        
       - name: scp
-        run: pip install -r requiremenst.txt
+        run: pip install -r requirements.txt
 #         run: scp cacl.py ${{ secrets.USERNAME }}@${{ secrets.HOST }} -p ${{ secrets.PORT }}:/home/alexander/PycharmProjects
 
 
