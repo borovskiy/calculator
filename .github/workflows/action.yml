@@ -16,11 +16,6 @@ jobs:
         
       - name: compile .exe
         run: pyinstaller --onefile calc.py
-        
-      - name: rename file
-        run: mv /home/runner/dist/calc calc.exe
-      
-        
       
       - name: scp
         uses: appleboy/scp-action@master
@@ -29,6 +24,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          source: "/dist/calc.exe"
+          source: "~/dist/calc"
           target: "/home/alexander/PycharmProjects"
           
