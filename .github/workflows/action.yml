@@ -17,8 +17,10 @@ jobs:
       - name: compile .exe
         run: pyinstaller --onefile calc.py
       
-      - name: copy file in server
-        run: cd dist/ ls -la
+      - name: dir
+        run: cd dist/ 
+      - name: olist dir
+        run: ls -la
 #         uses: appleboy/scp-action@master
 # #         with:
 # #           host: ${{ secrets.HOST }}
