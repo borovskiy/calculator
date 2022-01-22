@@ -16,6 +16,9 @@ jobs:
         
       - name: compile .exe
         run: pyinstaller --onefile calc.py
+        
+      - name: rename file
+        run: mv ~/dist/calc calc.exe
       
         
       
@@ -26,6 +29,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          source: "./dist/calc.exe"
+          source: "/dist/calc.exe"
           target: "/home/alexander/PycharmProjects"
           
