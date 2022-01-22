@@ -13,10 +13,11 @@ jobs:
         uses: actions/checkout@v1
        
       - name: scp
-        with:
-          local: "./cacl.py"
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
+        run: pwd
+#         with:
+#           local: "./cacl.py"
+#           host: ${{ secrets.HOST }}
+#           username: ${{ secrets.USERNAME }}
+#           password: ${{ secrets.PASSWORD }}
+#           port: ${{ secrets.PORT }}
 
