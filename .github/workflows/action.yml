@@ -13,8 +13,7 @@ jobs:
         uses: actions/checkout@v1
        
       - name: scp
-      -
-        uses: borovskiy/calculator@main
+      - uses: borovskiy/calculator@main
         with:
           local: "./*"
           host: ${{ secrets.HOST }}
