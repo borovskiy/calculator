@@ -16,9 +16,6 @@ jobs:
         
       - name: compile .exe
         run: pyinstaller --onefile calc.py
-      
-      - name: dir
-        run: mkdir dist/ 
         
       - name: list dir
         run: ls -al /dist
