@@ -17,8 +17,6 @@ jobs:
       - name: compile .exe
         run: pyinstaller --onefile calc.py
         
-      - name: update cursor
-        run: cd /home/runner/work/calculator/calculator/dist
         
       - name: scp
         uses: appleboy/scp-action@master
@@ -27,6 +25,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          source: "calc"
+          source: "/home/runner/work/calculator/calculator/dist/calc"
           target: "/home/alexander/PycharmProjects"
           
