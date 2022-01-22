@@ -15,7 +15,23 @@ jobs:
         run: ls -la
        
       - name: scp
-        run: pip install -r requirements.txt
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          sourse: "calc.py"
+          target: "/home"
+          
+        
+        
+        
+        
+        
+        
 #         run: scp cacl.py ${{ secrets.USERNAME }}@${{ secrets.HOST }} -p ${{ secrets.PORT }}:/home/alexander/PycharmProjects
 
 
+# ${{ secrets.USERNAME }}
+# ${{ secrets.HOST }}
+# ${{ secrets.PORT }}
