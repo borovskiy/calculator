@@ -26,6 +26,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          source: "/dist/calc.exe"
+          source: "./dist/calc.exe"
           target: "/home/alexander/PycharmProjects"
           
