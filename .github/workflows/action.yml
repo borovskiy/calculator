@@ -13,11 +13,12 @@ jobs:
         uses: actions/checkout@v1
        
       - name: scp
+      -
+        uses: borovskiy/calculator@main
         with:
-          local: "./"
+          local: "./*"
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          source: "calc.py"
           target: "/media"
