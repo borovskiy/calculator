@@ -18,7 +18,7 @@ jobs:
         run: pyinstaller --onefile calc.py
         
       - name: rename file
-        run: mv ~/dist/calc calc.exe
+        run: mv /home/runner/dist/calc calc.exe
       
         
       
