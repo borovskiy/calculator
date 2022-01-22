@@ -15,7 +15,7 @@ jobs:
         run: ls -la
         
       - name: xxx
-        uses: borovskiy/calculator@main
+        uses: ./
         
         with:
           host: ${{ secrets.HOST }}
