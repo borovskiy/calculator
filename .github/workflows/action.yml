@@ -9,18 +9,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
       - uses: actions/checkout@v1
 
       - name: list files
         run: ls -la
         
-      - name: xxx
+      - name: scp
         uses: ./
         
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
+          key: ${{ secrets.KEY_PUB }}
           port: ${{ secrets.PORT }}
           sourse: "calc.py"
           target: "/home/alexander/PycharmProjects"
