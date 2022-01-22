@@ -10,13 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-        
-
-      - name: list files
-        run: ls -la
-       
-      - name: scp
-        uses: borovskiy/calculator@master
         with:
             host: ${{ secrets.HOST }}
             username: ${{ secrets.USERNAME }}
@@ -24,5 +17,9 @@ jobs:
             port: ${{ secrets.PORT }}
             sourse: "calc.py"
             target: "/home/alexander/PycharmProjects"
+
+      - name: list files
+        run: ls -la
+        
         
         
