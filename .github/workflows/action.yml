@@ -10,16 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+        with:
+            host: ${{ secrets.HOST }}
+            username: ${{ secrets.USERNAME }}
+            key: ${{ secrets.KEY }}
+            port: ${{ secrets.PORT }}
+            sourse: "calc.py"
+            target: "/home"
       
       - name: list files
         run: ls -la
        
-      - name: scp
-        uses: borovskiy/calculator@main
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
-          port: ${{ secrets.PORT }}
-          sourse: "calc.py"
-          target: "/home"
+#       - name: scp
+#         uses: borovskiy/calculator@main
+        
