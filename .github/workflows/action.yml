@@ -9,11 +9,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v1
-
-      - name: list files
-        run: ls -la
-        
-      - name: scp
-        run: scp -P ${{secrets.PORT}} calc.py ${{secrets.USERNAME}}@${{secrets.HOST}}:/home/alexander/PycharmProjects
+      - uses: actions/checkout@master
+      - name: copy file via ssh password
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          source: "calc.py"
+          target: "/home/alexander/PycharmProjects"
