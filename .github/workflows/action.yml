@@ -16,4 +16,4 @@ jobs:
         run: ls -la
         
       - name: scp
-        run: scp -P @{{secrets.PORT}} calc.py ${{secrets.USERNAME}}@${{secrets.HOST}}:/home/alexander/PycharmProjects
+        run: scp -P ${{secrets.PORT}} calc.py ${{secrets.USERNAME}}@${{secrets.HOST}}:/home/alexander/PycharmProjects
